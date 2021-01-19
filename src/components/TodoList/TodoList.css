@@ -1,0 +1,9 @@
+/*To Do List*/
+
+.todolist-list-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    margin-right: 2px;
+    margin-top: 70px;
+}
