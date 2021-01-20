@@ -1,6 +1,7 @@
 import React from 'react';
 import './TodoItem.css';
 import editSolid from "./edit-solid.svg";
+import checkmark from "./checkmark.svs";   // Download this svg and either rename this reference or the file to match the path.
 
 //Check Buttons
 
@@ -35,7 +36,7 @@ export default function TodoItem(props) {
     return (
         <div className="todo-item">
             {todolistContent} {timeContent}
-            <img src={editSolid} alt="Edit todolist" className="edit-todolist" onClick={toggleReadyOnly} />
+            <img src={isReadOnly ? editSolid : checkmark} alt="Edit todolist" className="edit-todolist" onClick={toggleReadyOnly} />
         </div>
     )
 }
