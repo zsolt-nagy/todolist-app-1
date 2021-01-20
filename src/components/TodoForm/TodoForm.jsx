@@ -8,9 +8,15 @@ export default function TodoForm(props) {
         event.preventDefault();
         const todolist = document.querySelector('.js-todolist-item').value;
         const time = document.querySelector('.js-time').value;
-        document.querySelector('.js-todolist-item').value = '';
-        document.querySelector('.js-time').value = '';
-        props.handleAdd(todolist, time);
+        
+        if (todolist.trim().length === 0 || time.trim().length === 0) {
+            document.querySelector('.js-todolist-item').value = '';
+            document.querySelector('.js-time').value = '';
+            props.handleAdd(todolist, time);
+        } else {
+            // display an error message
+            alert('error');  // OR: add an error field next to the buttons and display a message in red
+        }
     }
 
   return (
